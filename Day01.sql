@@ -107,9 +107,8 @@ SELECT distinct orderid
 FROM orders, book
 WHERE (price-saleprice) = (
     SELECT MAX(price-saleprice) 
-    FROM book
-    INNER JOIN orders ON book.bookid = orders.bookid
-);
+    FROM book, orders
+    WHERE book.bookid = orders.bookid);
 
 --2.13 도서의 판매액 평균보다 자신의 구매액 평균이 더 높은 고객의 이름
 select customer.name 
