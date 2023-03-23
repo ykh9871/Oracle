@@ -103,16 +103,17 @@ FROM customer, orders, book
 where orders.custid = customer.custid AND orders.bookid = book.bookid;
 
 --2.12 도서의 가격(Book 테이블)과 판매가격(Orders 테이블)의 차이가 가장 많은 주문
-SELECT distinct orderid 
+SELECT *
 FROM orders, book
-WHERE (price-saleprice) = (
-    SELECT MAX(price-saleprice) 
+WHERE book.bookid = orders.bookid and
+    (price-saleprice) = 
+    (SELECT MAX(price-saleprice) 
     FROM book, orders
     WHERE book.bookid = orders.bookid);
 
 --2.13 도서의 판매액 평균보다 자신의 구매액 평균이 더 높은 고객의 이름
-select customer.name 
+select customer.name ,AVG(saleprice)
 from orders, customer
 WHERE orders.custid = customer.custid
-group by customer.custid, customer.name
+group by name
 HAVING AVG(saleprice) > (SELECT AVG(saleprice) from orders);
