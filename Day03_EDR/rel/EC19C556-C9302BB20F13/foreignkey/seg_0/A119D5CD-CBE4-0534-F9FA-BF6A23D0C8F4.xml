@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A119D5CD-CBE4-0534-F9FA-BF6A23D0C8F4" containerWithKeyObject="7CCD1D27-DF04-F0C8-3D82-41886790281D" localFKIndex="07A79EFC-F389-05A7-53DD-9ECEACF89044" name="BOOK_BOOKID_FK">
+<sourceConnName>Madang</sourceConnName>
+<sourceObjSchema>MADANG</sourceObjSchema>
+<sourceObjName>SYS_C007006</sourceObjName>
+<createdBy>ykh98</createdBy>
+<createdTime>2023-03-24 07:18:38 UTC</createdTime>
+<ownerDesignName>Day03_EDR</ownerDesignName>
+<referredTableLongName>MADANG.BOOK</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D8AB3169-BCE4-26B8-520E-4C842945B643</referredTableID>
+<keyObject>B0682A90-EFE4-7941-A178-166D95BDF513</keyObject>
+<referredKeyID>B0682A90-EFE4-7941-A178-166D95BDF513</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>BOOKID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
